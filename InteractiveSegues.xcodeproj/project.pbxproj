@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B01AC7A61B02E406005AAC9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AC7A51B02E406005AAC9C /* AppDelegate.swift */; };
-		B01AC7A81B02E406005AAC9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AC7A71B02E406005AAC9C /* ViewController.swift */; };
+		B01AC7A81B02E406005AAC9C /* RectanglesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AC7A71B02E406005AAC9C /* RectanglesViewController.swift */; };
 		B01AC7AB1B02E406005AAC9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01AC7A91B02E406005AAC9C /* Main.storyboard */; };
 		B01AC7AD1B02E406005AAC9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01AC7AC1B02E406005AAC9C /* Images.xcassets */; };
 		B01AC7B01B02E406005AAC9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B01AC7AE1B02E406005AAC9C /* LaunchScreen.xib */; };
 		B01AC7BC1B02E406005AAC9C /* InteractiveSeguesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AC7BB1B02E406005AAC9C /* InteractiveSeguesTests.swift */; };
+		B01AC7C61B02E4CB005AAC9C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AC7C51B02E4CB005AAC9C /* CircleView.swift */; };
+		B01AC7C81B02E642005AAC9C /* DotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01AC7C71B02E642005AAC9C /* DotsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		B01AC7A01B02E406005AAC9C /* InteractiveSegues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveSegues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01AC7A41B02E406005AAC9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B01AC7A51B02E406005AAC9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B01AC7A71B02E406005AAC9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B01AC7A71B02E406005AAC9C /* RectanglesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectanglesViewController.swift; sourceTree = "<group>"; };
 		B01AC7AA1B02E406005AAC9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B01AC7AC1B02E406005AAC9C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B01AC7AF1B02E406005AAC9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B01AC7B51B02E406005AAC9C /* InteractiveSeguesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteractiveSeguesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01AC7BA1B02E406005AAC9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B01AC7BB1B02E406005AAC9C /* InteractiveSeguesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveSeguesTests.swift; sourceTree = "<group>"; };
+		B01AC7C51B02E4CB005AAC9C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		B01AC7C71B02E642005AAC9C /* DotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				B01AC7A51B02E406005AAC9C /* AppDelegate.swift */,
-				B01AC7A71B02E406005AAC9C /* ViewController.swift */,
+				B01AC7A71B02E406005AAC9C /* RectanglesViewController.swift */,
+				B01AC7C71B02E642005AAC9C /* DotsViewController.swift */,
 				B01AC7A91B02E406005AAC9C /* Main.storyboard */,
 				B01AC7AC1B02E406005AAC9C /* Images.xcassets */,
 				B01AC7AE1B02E406005AAC9C /* LaunchScreen.xib */,
+				B01AC7C51B02E4CB005AAC9C /* CircleView.swift */,
 				B01AC7A31B02E406005AAC9C /* Supporting Files */,
 			);
 			path = InteractiveSegues;
@@ -212,7 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B01AC7A81B02E406005AAC9C /* ViewController.swift in Sources */,
+				B01AC7C81B02E642005AAC9C /* DotsViewController.swift in Sources */,
+				B01AC7C61B02E4CB005AAC9C /* CircleView.swift in Sources */,
+				B01AC7A81B02E406005AAC9C /* RectanglesViewController.swift in Sources */,
 				B01AC7A61B02E406005AAC9C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
