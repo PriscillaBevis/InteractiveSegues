@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Rectangles View Controller-->
@@ -16,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uL-1Q-Fir">
-                                <rect key="frame" x="271" y="162" width="143" height="78"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6rZ-t7-lv8">
                                 <rect key="frame" x="271" y="310" width="143" height="63"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uL-1Q-Fir">
+                                <rect key="frame" x="271" y="163" width="143" height="78"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -30,7 +31,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="mainRectangle" destination="9uL-1Q-Fir" id="tg7-Tc-LVa"/>
-                        <segue destination="X7w-m0-hMG" kind="show" identifier="showDots" id="kZd-9s-a2v"/>
+                        <segue destination="X7w-m0-hMG" kind="custom" identifier="showDots" id="kZd-9s-a2v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -46,7 +47,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YVc-E2-dmN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n7Z-Lk-cNZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nl-dw-ogv" customClass="CircleView" customModule="InteractiveSegues" customModuleProvider="target">
@@ -76,11 +77,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3Z-fG-D79">
+                                <rect key="frame" x="16" y="550" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="P7G-3T-E1i"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zhP-0i-BSX" kind="unwind" unwindAction="unwindSegue:" id="vdg-m0-b50"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YVc-E2-dmN" firstAttribute="top" secondItem="s3Z-fG-D79" secondAttribute="bottom" constant="20" id="Axa-WH-WjM"/>
+                            <constraint firstItem="s3Z-fG-D79" firstAttribute="trailing" secondItem="n7Z-Lk-cNZ" secondAttribute="trailingMargin" id="RzA-B3-ej7"/>
+                            <constraint firstItem="s3Z-fG-D79" firstAttribute="leading" secondItem="n7Z-Lk-cNZ" secondAttribute="leadingMargin" id="vyN-ua-unB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07a-dV-YUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zhP-0i-BSX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="971" y="357"/>
         </scene>
